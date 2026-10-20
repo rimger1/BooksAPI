@@ -1,0 +1,34 @@
+### get all books
+GET http://localhost:3000/api/books/
+Content-Type: application/json
+
+
+### get specific book by id
+GET http://localhost:3000/api/books/1
+Content-Type: application/json
+
+
+### Create new book
+POST http://localhost:3000/api/books
+Content-Type: application/json
+
+{
+    "title": "janos legyen fent a janos hegyen",
+    "author": "janos vitez",
+    "category": "műremek",
+    "publish_year": 2077
+}
+
+### update book
+PUT http://localhost:3000/api/books/13
+Content-Type: application/json
+
+{
+    "title": "jancs jancsikaaa",
+    "author": "ruzsa magdi",
+    "publish_year": "2000"
+}
+
+### delete book
+DELETE http://localhost:3000/api/books/7
+Content-Type: application/json

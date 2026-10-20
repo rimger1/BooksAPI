@@ -2,10 +2,9 @@ require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
 
-const tableroutes = require('./modules/tables_ops')
-const emailroutes = require('./modules/email_ops')
-const fileroutes = require('./modules/file_ops')
-const authroutes = require('./modules/auth_ops')
+const booksroutes = require('./routes/books.routes')
+const readersroutes = require('./routes/readers.routes')
+const loansroutes = require('./routes/loans.routes')
 const app = express()
 
 //middleware
@@ -16,10 +15,9 @@ app.use(express.urlencoded({extended:true}))
 
 
 
-app.use('/', tableroutes)
-app.use('/email', emailroutes)
-app.use('/file', fileroutes)
-app.use('/auth', authroutes)
+app.use('/api/books', booksroutes)
+app.use('/api/readers', readersroutes)
+app.use('/api/loans', loansroutes)
 
 app.listen(process.env.APP_PORT, () =>{
     console.log(`server on http://localhost:${process.env.APP_PORT}`)

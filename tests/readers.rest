@@ -1,0 +1,38 @@
+
+
+### get all readers
+GET http://localhost:3000/api/readers
+Content-Type: application/json
+
+
+### get specific reader by id
+GET http://localhost:3000/api/readers/4
+Content-Type: application/json
+
+
+
+### POST reader
+POST http://localhost:3000/api/readers
+Content-Type: application/json
+
+{
+    "name": "palika",
+    "email": "asd@gmail.com",
+    "phone": "232323"
+}
+
+
+### update reader
+PUT http://localhost:3000/api/readers/1
+Content-Type: application/json
+
+{
+    "name": "péter pál apostol",
+    "email": "a korintusziakhoz írt első leveléből",
+    "phone": "06 70 2342342"
+}
+
+
+### delete reader
+DELETE http://localhost:3000/api/readers/6
+Content-Type: application/json
