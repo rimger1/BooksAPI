@@ -1,0 +1,44 @@
+
+
+
+### get all loans
+GET http://localhost:3000/api/loans
+Content-Type: application/json
+
+
+### get a specific loan
+GET http://localhost:3000/api/loans/1
+Content-Type: application/json
+
+
+### post new loan
+POST http://localhost:3000/api/loans
+Content-Type: application/json
+
+{
+    "reader_id": 1,
+    "book_id": 1,
+    "loan_date": "2024-06-01",
+    "return_date": "2024-06-15"
+}
+
+
+### update loan
+PUT http://localhost:3000/api/loans/60
+Content-Type: application/json
+
+{
+    "reader_id": 1,
+    "book_id": 1,
+    "loan_date": "2024-06-01",
+    "return_date": "2024-06-20"
+}
+
+### delete loan
+DELETE http://localhost:3000/api/loans/1
+Content-Type: application/json
+
+
+### return loan
+POST http://localhost:3000/api/loans/2/return
+Content-Type: application/json
